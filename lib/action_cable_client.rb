@@ -44,7 +44,7 @@ class ActionCableClient
     #      https://github.com/mwylde/em-websocket-client/blob/master/lib/em-websocket-client.rb
     #   is a subclass of
     #      https://github.com/eventmachine/eventmachine/blob/master/lib/em/connection.rb
-    @_websocket_client = EventMachine::WebSocketClient.connect(_uri)
+    @_websocket_client = EventMachine::WebSocketClient.connect(_uri, debug=true)
   end
 
   # @param [String] action - how the message is being sent
